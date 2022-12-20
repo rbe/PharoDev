@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+    jdt2famix:
+        build:
+            context: jdt2famix
+        image: jdt2famix:latest
+        volumes:
+            - data:/data:rw
+    verveinej:
+        build:
+            context: VerveineJ
+        image: verveinej:latest
+        volumes:
+            - data:/data:rw
+    srcml:
+        build:
+            context: srcML
+        image: srcml:latest
+        volumes:
+            - data:/data:rw
+volumes:
+    data:
